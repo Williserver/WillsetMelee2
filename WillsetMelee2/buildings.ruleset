@@ -1291,12 +1291,15 @@ Your reputation and goodwill among other nations is recovered twice\
  as fast.\
 ")
 
+; Great Library switched to Republic
+; Science buff added 
+; WILL, 1/3/2024
 [building_great_library]
 name		= _("Great Library")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Literacy", "Player"
+      "Tech", "The Republic", "Player"
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
@@ -1310,8 +1313,7 @@ sabotage	= 0
 sound		= "w_great_library"
 sound_alt	= "w_generic"
 helptext	= _("\
-The civilization which builds the Great Library gets every advance\
- that at least two other teams have achieved.\
+The civilization which builds the Great Library gets a 100% bonus to science output in all cities with libraries.\
 ")
 
 [building_great_wall]
