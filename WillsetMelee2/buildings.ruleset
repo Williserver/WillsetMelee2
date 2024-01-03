@@ -1462,6 +1462,8 @@ Makes two unhappy citizens content in every city (including citizens\
  unhappy about military activity).\
 ")
 
+; Up King Richard's cost to 300
+; Will, 1/3/2024
 [building_king_richards_crusade]
 name		= _("King Richard's Crusade")
 genus		= "GreatWonder"
@@ -1475,7 +1477,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Robotics", "World", TRUE
     }
-build_cost	= 150
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_king_richards_crusade"
