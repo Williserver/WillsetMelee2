@@ -1899,12 +1899,17 @@ reqs	=
       "Building", "Eiffel Tower", "Player"
     }
 
+; Nerf great library for huge games.
+; 100% science buff -- still strong, commeasurate w/ length of wonder.
+; WILL, 1/3/2024
 [effect_great_library]
-type    = "Tech_Parasite"
-value	= 2
-reqs	=
+type    = "Output_Bonus"
+value   = 100
+reqs    =
     { "type", "name", "range"
+      "Building", "Library", "City"
       "Building", "Great Library", "Player"
+      "OutputType", "Science", "Local"
     }
 
 [effect_great_wall]
@@ -2248,6 +2253,16 @@ reqs	=
       "Building", "Sun Tzu's War Academy", "Player", TRUE
       "UnitClass", "Land", "Local", TRUE
       "UnitFlag", "Diplomat", "Local", FALSE
+    }
+
+; Temple of Artemis buffs monarchy.
+; Will, 1/3/2024
+[effect_temple_of_artemis]
+type    = "Make_Content"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Temple of Artemis", "Player"
     }
 
 [effect_united_nations]
