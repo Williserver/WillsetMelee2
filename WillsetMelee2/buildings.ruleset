@@ -601,6 +601,8 @@ In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or\
 ; There would also be a change of meltdown during civil disorder,
 ; but that has not been implemented yet.
 
+; Update offshore platform production cost and description
+; WILL, 1/3/2024
 [building_offshore_platform]
 name		= _("Offshore Platform")
 genus		= "Improvement"
@@ -620,8 +622,8 @@ sabotage	= 100
 sound		= "b_offshore_platform"
 sound_alt	= "b_generic"
 helptext	= _("\
-Adds 1 extra shield resource on all Oceanic tiles worked by a city.  The\
- city needs to be coastal to build this improvement.\
+The Offshore Platform provides a 50% bonus to production in the city where it is built.\
+ The city needs to be coastal to build this improvement.\
 ")
 
 [building_palace]
