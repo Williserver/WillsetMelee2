@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="Classic buildings data for Freeciv"
+description="Willset buildings data for Freeciv"
 options="+Freeciv-ruleset-Devel-2017.Jan.02"
 format_version=20
 
@@ -1410,6 +1410,30 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Boosts science production by 100% in every city you control that\
  has a University.\
+")
+
+; Internet wonder has been brought over from other ruleset
+; And adapted to fit this 
+; Will, 1/3/2024
+[building_internet]
+name		= _("Internet")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Computers", "Player"
+      "Building", "Research Lab", "City"
+    }
+graphic		= "b.internet"
+graphic_alt	= "b.seti_program"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_seti_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+The internet reveals all cities on the map to its owner\
+ and provides a 50% bonus to science production in all of your cities with research labs.\
 ")
 
 [building_js_bachs_cathedral]
