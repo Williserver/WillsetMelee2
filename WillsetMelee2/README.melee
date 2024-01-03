@@ -1,9 +1,11 @@
 ===============
-Classic Ruleset
+WillsetMelee Ruleset
 ===============
 
 History
 -------
+
+WillsetMelee is an offshoot of the Willset and Classic rulesets with a focus on heavier combat.
 
 Classic ruleset was freeciv's default ruleset until freeciv version 3.0,
 where it got replaced by civ2civ3 ruleset.
@@ -11,8 +13,6 @@ where it got replaced by civ2civ3 ruleset.
 
 Main differences to civ2civ3 (the default)
 ------------------------------------------
-
-- The Republic and Democracy have rapture growth enabled
 
 - There's no Tribal, Fundamentalism, or Federation government types
 
