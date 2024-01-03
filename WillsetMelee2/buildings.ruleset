@@ -1425,7 +1425,9 @@ reqs	=
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 600
 upkeep		= 0
 sabotage	= 0
