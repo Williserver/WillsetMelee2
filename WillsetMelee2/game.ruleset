@@ -9,8 +9,10 @@
 ; Note that the freeciv AI may not cope well with anything more
 ; than minor changes.
 
+; Metadata set
+; WILL, 1/3/2024
 [datafile]
-description="Classic game rules for Freeciv"
+description="Willset Melee game rules for Freeciv"
 options="+Freeciv-ruleset-Devel-2017.Jan.02"
 format_version=20
 
@@ -23,7 +25,7 @@ description_file = "classic/README.classic"
 
 [about]
 ; Ruleset name
-name = _("Classic ruleset")
+name = _("Willset Melee ruleset")
 
 ; There`s no separate versioning in rulesets part of main freeciv distribution
 ;version = ""
@@ -36,10 +38,9 @@ name = _("Classic ruleset")
 
 ; Summary of the ruleset
 summary = _("\
-You are playing with classic Freeciv ruleset for single player games. \
+You are playing with the WillsetMelee Freeciv ruleset. \
 Note that in addition to the ruleset, also server settings affect \
 the rules of the game.\n\n\
-This was the default ruleset until Freeciv 2.6.\
 ")
 
 ; Detailed description
@@ -1300,7 +1301,7 @@ base_tech_cost   = 20
 ; "Normal Players" - Technology cost is reduced depending on the number of
 ;                    normal players (human and AI) which already know the
 ;                    tech.
-tech_leakage = "None"
+tech_leakage = "All Players"
 
 ; Method of paying tech upkeep
 ; "None"   - no upkeep
@@ -1458,19 +1459,23 @@ effects        = "ReducePopulation", "Fallout"
 ;                "Science"  - Bonus to research
 ;                "Both"     - Bonus to gold and research
 ;
+
+; trade only provides science bonus
+; additionally, traderoutes now marked as inactive.
+; WILL: 1/3/2024
 [trade]
 settings =
   { "type",       "pct", "cancelling", "bonus"
-    "National",   100,   "Cancel",     "Both"
-    "NationalIC", 200,   "Cancel",     "Both"
-    "IN",         200,   "Cancel",     "Both"
-    "INIC",       400,   "Cancel",     "Both"
-    "Ally",       200,   "Cancel",     "Both"
-    "AllyIC",     400,   "Cancel",     "Both"
-    "Enemy",      200,   "Cancel",     "Both"
-    "EnemyIC",    400,   "Cancel",     "Both"
-    "Team",       200,   "Cancel",     "Both"
-    "TeamIC",     400,   "Cancel",     "Both"
+    "National",   100,   "Inactive",     "Science"
+    "NationalIC", 200,   "Inactive",     "Science"
+    "IN",         200,   "Inactive",     "Science"
+    "INIC",       400,   "Inactive",     "Science"
+    "Ally",       200,   "Inactive",     "Science"
+    "AllyIC",     400,   "Inactive",     "Science"
+    "Enemy",      200,   "Inactive",     "Science"
+    "EnemyIC",    400,   "Inactive",     "Science"
+    "Team",       200,   "Inactive",     "Science"
+    "TeamIC",     400,   "Inactive",     "Science"
   }
 
 ; When are goods for the trade route chosen.
@@ -1611,11 +1616,31 @@ colorlist =
 ; etc...
 
 [settings]
-; freeciv game settings for the classic ruleset
-;
-; set =
-;     { "name", "value", "lock"
-;       "bool_set", TRUE, FALSE
-;       "int_set", 123, FALSE
-;       "str_set", "test", FALSE
-;     }
+; freeciv game settings for Willset ruleset
+; WILL, 1/3/24
+
+set =
+    { "name", "value", "lock"
+	  "nationset", "all"
+	  "trading_tech", "ENABLED"
+	  "size", 10
+	  "huts", 100
+	  "temperature", 45
+	  "wetness", 30
+	  "specials", 800
+	  "startunits", "ccccwwxxx"
+	  "gold", 150
+	  "sciencebox", 125
+	  "techpenalty", 0
+	  "foodbox", 40
+	  "citymindist", 3
+	  "trademindist", 1
+	  "rapturedelay", 2
+	  "barbarians", "HORDES"
+	  "onsetbarbs", 80
+	  "fogofwar", "DISABLED"
+	  "airliftingstyle", "FROM_ALLIES|TO_ALLIES"
+	  "endspaceship", "DISABLED"
+	  "allowtake", "HAhadOob"
+	  "killstack", "disabled"
+    }
