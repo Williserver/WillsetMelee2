@@ -1438,7 +1438,7 @@ sabotage	= 0
 sound		= "w_seti_program"
 sound_alt	= "w_generic"
 helptext	= _("\
-The internet reveals all cities on the map to its owner\
+The internet reveals all cities on the map to its owner, gives an immediate tech,\
  and provides a 50% bonus to science production in all of your cities with research labs.\
 ")
 
