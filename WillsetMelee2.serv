@@ -1,6 +1,6 @@
-# Server commands to use classic Freeciv rules
+# Server commands to use WillsetMelee2 Freeciv rules
 #
 
-rulesetdir classic
+rulesetdir WillsetMelee2
 
 # changed game settings are defined in game.ruleset
