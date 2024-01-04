@@ -289,6 +289,7 @@ reqs	=
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "OutputType", "Trade", "Local"
+    }
 
 ; Add democracy 15% corruption.
 ; This nerf still leaves democracy in great shape.
@@ -309,7 +310,6 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
       "OutputType", "Trade", "Local"
-    }
     }
 
 [effect_corruption_despotism0]
