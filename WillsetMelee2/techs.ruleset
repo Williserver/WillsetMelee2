@@ -153,6 +153,8 @@ flags    = ""
 graphic     = "a.atomic_theory"
 graphic_alt = "-"
 
+; Automobile requires machine tools instead of steel.
+; WILL, 1/3/2024
 [advance_automobile]
 name     = _("Automobile")
 req1     = "Combustion"
@@ -271,18 +273,23 @@ Allows Settlers, Workers and Engineers to build fortresses, and to \
 build oil wells on Desert tiles.\
 ")
 
+; Currency made harder to get
+; Thwarts wonder rushing and adds difficulty
+; WILL, 1/3/2024 (copying from 9/25/2022)
 [advance_currency]
 name     = _("Currency")
 req1     = "Bronze Working"
-req2     = "None"
+req2     = "Code of Laws"
 flags    = ""
 graphic     = "a.currency"
 graphic_alt = "-"
 
+; Democracy much harder to get.
+; WILL, 1/3/2024
 [advance_democracy]
 name     = _("Democracy")
-req1     = "Banking"
-req2     = "Invention"
+req1     = "Economics"
+req2     = "Leadership"
 flags    = ""
 graphic     = "a.democracy"
 graphic_alt = "-"
@@ -295,10 +302,12 @@ flags    = ""
 graphic     = "a.economics"
 graphic_alt = "-"
 
+; Electricity now requires industrialization
+; WILL, 1/3/2024
 [advance_electricity]
 name     = _("Electricity")
 req1     = "Metallurgy"
-req2     = "Magnetism"
+req2     = "Industrialization"
 flags    = ""
 graphic     = "a.electricity"
 graphic_alt = "-"
@@ -352,9 +361,13 @@ flags    = ""
 graphic     = "a.feudalism"
 graphic_alt = "-"
 
+; Flight now requires automobile
+; WILL, 1/3/2024
+; Note: fixed bug in previous ruleset with combusion and automobile being required
+; combustion is a prereq for automobile.
 [advance_flight]
 name     = _("Flight")
-req1     = "Combustion"
+req1     = "Automobile"
 req2     = "Theory of Gravity"
 flags    = "Build_Airborne"
 graphic     = "a.flight"
@@ -369,10 +382,15 @@ flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
 
+; Genetic engineering now requires Computers instead of previous reqs.
+; This is due to the Cure for Cancer buff -- this is now a last-chance
+; Happiness wonder.
+; NOTE: Consider making it a harder path -- needs to be a more important decision.
+; WILL, 1/3/2024 (copied from 9/25/2022)
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
-req1     = "Medicine"
-req2     = "The Corporation"
+req1     = "Computers"
+req2     = "None"
 flags    = ""
 graphic     = "a.genetic_engineering"
 graphic_alt = "-"
@@ -555,10 +573,12 @@ flags    = ""
 graphic     = "a.monotheism"
 graphic_alt = "-"
 
+; Note: mysticism now requires ceremonial burial.
+; WILL, 1/3/2024
 [advance_mysticism]
 name     = _("Mysticism")
 req1     = "Ceremonial Burial"
-req2     = "None"
+req2     = "Polytheism"
 flags    = ""
 graphic     = "a.mysticism"
 graphic_alt = "-"
@@ -733,10 +753,15 @@ flags    = ""
 graphic     = "a.stealth"
 graphic_alt = "-"
 
+; Steam Engine now requires chemistry and magnetism
+; Instead of Physics and Invention.
+; This is to make it harder to get and thus establish
+; a niche for frigates
+; WILL, 1/3/2024 (from 9/25/2022)
 [advance_steam_engine]
 name     = _("Steam Engine")
-req1     = "Physics"
-req2     = "Invention"
+req1     = "Chemistry"
+req2     = "Magnetism"
 flags    = ""
 graphic     = "a.steam_engine"
 graphic_alt = "-"
@@ -782,6 +807,8 @@ flags    = ""
 graphic     = "a.the_republic"
 graphic_alt = "-"
 
+; To rebuff chariots, the wheel is back to requiring only horseback riding
+; WILL, 1/3/2024
 [advance_the_wheel]
 name     = _("The Wheel")
 req1     = "Horseback Riding"
