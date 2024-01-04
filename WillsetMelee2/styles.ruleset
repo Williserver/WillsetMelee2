@@ -8,7 +8,7 @@
 ; use your new customized file.
 
 [datafile]
-description="Classic nation theme data for Freeciv"
+description="WillsetMelee nation theme data for Freeciv"
 options="+Freeciv-ruleset-Devel-2017.Jan.02"
 format_version=20
 

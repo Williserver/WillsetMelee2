@@ -8,7 +8,7 @@
 ; use your new customized file.
 
 [datafile]
-description="Classic cities data for Freeciv"
+description="WillsetMelee cities data for Freeciv"
 options="+Freeciv-ruleset-Devel-2017.Jan.02"
 format_version=20
 
