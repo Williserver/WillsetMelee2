@@ -1405,9 +1405,12 @@ reqs =
       "OutputType", "Shield", "Local"
     }
 
+; NOTABLE CHANGE FROM MELEE 1
+; Palace now only provides 75% prod buff in Monarchy
+; WILL, 1/3/2024
 [effect_palace_6]
 type = "Output_Bonus"
-value  = 50
+value  = 75
 reqs =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
