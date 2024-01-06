@@ -1347,12 +1347,365 @@ uk_gold       = 0
 flags         = ""
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
+The artillery is an upgraded cannon. It is a very\
+ strong attacker but equally weak defender and\
+ will need an escort to be effective.\
+")
+
+[unit_howitzer]
+name          = _("Howitzer")
+class         = "Land"
+tech_req      = "Robotics"
+obsolete_by   = "None"
+graphic       = "u.howitzer"
+graphic_alt   = "-"
+sound_move    = "m_howitzer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_howitzer"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 12
+defense       = 2
+hitpoints     = 30
+firepower     = 2
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = ""
+roles         = "AttackStrongStartUnit"
+helptext      = _("\
 Howitzers are upgraded artillery with improved\
  defensive as well as offensive capabilities.\
  They can shoot over city walls, ignoring their effect.\
 ")
 
-Destroyer"
+[unit_fighter]
+name          = _("Fighter")
+class         = "Air"
+tech_req      = "Flight"
+obsolete_by   = "Stealth Fighter"
+graphic       = "u.fighter"
+graphic_alt   = "-"
+sound_move    = "m_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 4
+defense       = 3
+hitpoints     = 20
+firepower     = 2
+move_rate     = 10
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 1
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+targets       = "Air", "Missile"
+bonuses       =
+   { "flag", "type", "value"
+     "Helicopter", "DefenseDivider", 1
+     "Helicopter", "Firepower1", 1
+   }
+flags         = "AirAttacker"
+roles         = ""
+helptext      = _("\
+Fighters are your first airborne units. They can\
+ move anywhere and attack any unit.\
+")
+
+[unit_bomber]
+name          = _("Bomber")
+class         = "Air"
+tech_req      = "Advanced Flight"
+obsolete_by   = "Stealth Bomber"
+graphic       = "u.bomber"
+graphic_alt   = "-"
+sound_move    = "m_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 120
+pop_cost      = 0
+attack        = 12
+defense       = 1
+hitpoints     = 20
+firepower     = 2
+move_rate     = 8
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 2
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Bombers are specialized airborne units that may\
+ only attack ground targets, not other airborne\
+ units.\
+")
+
+[unit_helicopter]
+; /* TRANS: unit type */
+name          = _("Helicopter")
+class         = "Helicopter"
+tech_req      = "Combined Arms"
+obsolete_by   = "None"
+graphic       = "u.helicopter"
+graphic_alt   = "-"
+sound_move    = "m_helicopter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_helicopter"
+sound_fight_alt = "f_generic"
+build_cost    = 100
+pop_cost      = 0
+attack        = 10
+defense       = 3
+hitpoints     = 20
+firepower     = 2
+move_rate     = 6
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+flags         = "FieldUnit", "OneAttack", "Helicopter", "AirAttacker"
+roles         = ""
+helptext      = _("\
+The Helicopter is a very powerful unit, as it can both fly and\
+ conquer cities.  Care must be exercised, because Helicopters lose a\
+ small amount of health for every turn not spent in a city or airbase\
+ or on a Carrier, unless you have the United Nations wonder, and\
+ Helicopters may be attacked by ground units.\
+")
+
+[unit_stealth_fighter]
+name          = _("Stealth Fighter")
+class         = "Air"
+tech_req      = "Stealth"
+obsolete_by   = "None"
+graphic       = "u.stealth_fighter"
+graphic_alt   = "-"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 8
+defense       = 4
+hitpoints     = 20
+firepower     = 2
+move_rate     = 14
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 1
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+targets       = "Air", "Missile"
+bonuses       =
+   { "flag", "type", "value"
+     "Helicopter", "DefenseDivider", 1
+     "Helicopter", "Firepower1", 1
+   }
+vision_layer  = "Stealth"
+flags         = "AirAttacker"
+roles         = ""
+helptext      = _("\
+An improved Fighter, with improved attack and a higher movement\
+ radius.\
+")
+
+[unit_stealth_bomber]
+name          = _("Stealth Bomber")
+class         = "Air"
+tech_req      = "Stealth"
+obsolete_by   = "None"
+graphic       = "u.stealth_bomber"
+graphic_alt   = "-"
+sound_move    = "m_stealth_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 160
+pop_cost      = 0
+attack        = 18
+defense       = 5
+hitpoints     = 20
+firepower     = 2
+move_rate     = 12
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 2
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+vision_layer  = "Stealth"
+flags         = "FieldUnit", "OneAttack", "AirAttacker",
+                "HasNoZOC"
+roles         = ""
+helptext      = _("\
+An improved Bomber, with improved attack and a higher movement\
+ radius.\
+")
+
+[unit_trireme]
+; /* TRANS: unit type */
+name          = _("Trireme")
+class         = "Trireme"
+tech_req      = "Map Making"
+obsolete_by   = "Caravel"
+graphic       = "u.trireme"
+graphic_alt   = "-"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_trireme"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land"
+flags         = "BadCityDefender", "Provoking"
+roles         = "Ferryboat", "FerryStartUnit"
+helptext      = _("\
+The Trireme is your first boat unit. It can act\
+ as a transport ship and has rudimentary offensive\
+ capabilities, but may not enter deep ocean tiles.\
+")
+
+[unit_caravel]
+name          = _("Caravel")
+class         = "Sea"
+tech_req      = "Navigation"
+obsolete_by   = "Galleon"
+graphic       = "u.caravel"
+graphic_alt   = "-"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 3
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land"
+flags         = "BadCityDefender", "Provoking"
+roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+helptext      = _("\
+The Caravel replaces the Trireme and can enter\
+ any ocean tile.\
+")
+
+[unit_galleon]
+name          = _("Galleon")
+class         = "Sea"
+tech_req      = "Magnetism"
+obsolete_by   = "Transport"
+graphic       = "u.galleon"
+graphic_alt   = "-"
+sound_move    = "m_galleon"
+sound_move_alt = "m_generic"
+sound_fight   = "f_galleon"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 0
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 2
+transport_cap = 4
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land"
+flags         = "BadCityDefender", "Provoking"
+roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+helptext      = _("\
+The Galleon is a pure transport ship and cannot\
+ attack other ships, though it may still defend\
+ itself when attacked.\
+")
+
+[unit_frigate]
+name          = _("Frigate")
+class         = "Sea"
+tech_req      = "Magnetism"
+obsolete_by   = "Ironclad"
+graphic       = "u.frigate"
+graphic_alt   = "-"
+sound_move    = "m_frigate"
+sound_move_alt = "m_generic"
+sound_fight   = "f_frigate"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 2
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land"
+flags         = "BadCityDefender", "Provoking"
+roles         = "Hunter"
+helptext      = _("\
+The Frigate is a highly versatile boat unit,\
+ that is both a strong offensive unit as well\
+ as a decent transport ship.\
+")
+
+[unit_ironclad]
+name          = _("Ironclad")
+class         = "Sea"
+tech_req      = "Steam Engine"
+obsolete_by   = "Destroyer"
 graphic       = "u.ironclad"
 graphic_alt   = "-"
 sound_move    = "m_ironclad"
